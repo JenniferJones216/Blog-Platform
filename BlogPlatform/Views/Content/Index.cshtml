@@ -1,0 +1,23 @@
+﻿@model IEnumerable<BlogPlatform.Models.Content>
+
+@{}
+<div class="text-center">
+    <h1>List of Blog Posts</h1>
+
+    <h2><a href="/Content/AddContent">Create New Blog Entry</a></h2>
+    <div class="text-success">@ViewBag.Result</div>
+    <div class="text-danger">@ViewBag.Error</div>
+    <hr />
+    <ul>
+        @foreach (var content in Model)
+        {
+            <li>
+                <a href="/Content/Details/@content.Id">@content.Title</a> - @content.Author - @content.Now
+                <a href="/Content/DeleteContent/@content.Id">Delete</a>
+            </li>
+        }
+    </ul>
+</div>
+
+
+
