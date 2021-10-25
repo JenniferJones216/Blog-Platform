@@ -13,15 +13,17 @@ namespace BlogPlatform.Controllers
         private IRepository<Content> _contentRepo;
         public DateTime Now;
         
-        
+
+
 
         public ContentController(IRepository<Content> contentRepo)
         {
             this._contentRepo = contentRepo;
             this.Now = DateTime.Now;
         }
-        public IActionResult Index(string? message)
+        public IActionResult Index(string? message) 
         {
+            DateTime dateOnly = Now.Date;
             if (!String.IsNullOrEmpty(message))
             {
                 ViewBag.Result = message;
@@ -33,6 +35,7 @@ namespace BlogPlatform.Controllers
         public IActionResult AddContent()
         {
             DateTime Now = DateTime.Now;
+            DateTime dateOnly = Now.Date;
             ViewBag.Categories = _contentRepo.GetAllCategories(); 
             return View(new Content());
         }

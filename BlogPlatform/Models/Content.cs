@@ -14,6 +14,7 @@ namespace BlogPlatform.Models
 
         //add automatic date and time
         public DateTime Now { get; set; }
+        public DateTime dateOnly { get; }
         
 
 

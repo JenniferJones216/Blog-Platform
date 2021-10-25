@@ -21,23 +21,27 @@
         </section>
         <dl id="List">
 
-            <h2>Dance Steps</h2>
+            <h2>Learning to Dance</h2>
             @foreach (var content in Model)
                 @if (content.CategoryId == 1)
-                {
-                    <dd>
-                        <a href="/Content/Details/@content.Id">@content.Title</a>
-                        @*<a href="/Content/DeleteContent/@content.Id">Delete</a>*@
-                        <hr />
-                    </dd>
-                }
+                    {
+                        <dd>
+                            <a href="/Content/Details/@content.Id">@content.Title</a> - by  
+                            <a href="/Content/Details/@content.Id">@content.Author</a> - 
+                            <a href="/Content/Details/@content.Id">@content.Now</a>
+                            @*<a href="/Content/DeleteContent/@content.Id">Delete</a>*@
+                            <hr />
+                        </dd>
+                    }
 
                 <h2>Music</h2>
                 @foreach (var content in Model)
                     @if (content.CategoryId == 2)
                     {
                         <dd>
-                            <a href="/Content/Details/@content.Id">@content.Title</a>
+                            <a href="/Content/Details/@content.Id">@content.Title</a> - by 
+                            <a href="/Content/Details/@content.Id">@content.Author</a> -
+                            <a href="/Content/Details/@content.Id">@content.Now</a>
                             @*<a href="/Content/DeleteContent/@content.Id">Delete</a>*@
                             <hr />
                         </dd>
@@ -48,7 +52,9 @@
                     @if (content.CategoryId == 3)
                     {
                         <dd>
-                            <a href="/Content/Details/@content.Id">@content.Title</a>
+                            <a href="/Content/Details/@content.Id">@content.Title</a> - by 
+                            <a href="/Content/Details/@content.Id">@content.Author</a> -
+                            <a href="/Content/Details/@content.Id">@content.Now</a>
                             @*<a href="/Content/DeleteContent/@content.Id">Delete</a>*@
                             <hr />
                         </dd>
