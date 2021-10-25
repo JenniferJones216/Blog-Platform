@@ -16,21 +16,49 @@
     <div class="div2">
         <h1>Latin Dance Blog - Index</h1>
 
-        <h3><a href="/Content/AddContent">Create New Blog Entry</a></h3>
+        <section class="CreateButton">
+            <a href="/Content/AddContent">Create New Blog Entry</a>
+        </section>
         <dl id="List">
 
-
+            <h2>Dance Steps</h2>
             @foreach (var content in Model)
-            {
-                <dd>
-                    <a href="/Content/Details/@content.Id">@content.Title - </a>
-                    <a href="/Content/DeleteContent/@content.Id">Delete</a>
-                    <hr />
-                </dd>
-            }
-        </dl>
+                @if (content.CategoryId == 1)
+                {
+                    <dd>
+                        <a href="/Content/Details/@content.Id">@content.Title</a>
+                        @*<a href="/Content/DeleteContent/@content.Id">Delete</a>*@
+                        <hr />
+                    </dd>
+                }
 
-        <h3><a href="/Home/Index">Back to Home Page</a></h3>
+                <h2>Music</h2>
+                @foreach (var content in Model)
+                    @if (content.CategoryId == 2)
+                    {
+                        <dd>
+                            <a href="/Content/Details/@content.Id">@content.Title</a>
+                            @*<a href="/Content/DeleteContent/@content.Id">Delete</a>*@
+                            <hr />
+                        </dd>
+                    }
+
+                <h2>Social Dancing</h2>
+                @foreach (var content in Model)
+                    @if (content.CategoryId == 3)
+                    {
+                        <dd>
+                            <a href="/Content/Details/@content.Id">@content.Title</a>
+                            @*<a href="/Content/DeleteContent/@content.Id">Delete</a>*@
+                            <hr />
+                        </dd>
+                    }
+
+                    </dl>
+
+        <section class="BackButton">
+            <a href="/Home/Index">Back to Home Page</a>
+        </section>
 
 
     </div>

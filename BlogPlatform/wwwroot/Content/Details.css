@@ -34,15 +34,24 @@
 
 .EditDeleteLinks a {
     text-decoration: none;
-   
+    color: black;
+    background-color: #FF4500;
+    padding: 10px 24px;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: 2px solid black;
 }
 
 .EditDeleteLinks a:hover {
     background-color: #FF8300;
 }
 
+.EditDeleteLinks {
+    padding-bottom: 2em;
+}
+
 .EditDeleteLinks a:visited {
-    text-decoration: none; 
+    text-decoration: none;
     color: black;
 }
 

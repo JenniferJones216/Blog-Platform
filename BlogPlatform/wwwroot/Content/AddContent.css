@@ -26,20 +26,6 @@ hr {
     grid-area: 1 / 3 / 2 / 4;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
-
-    a:hover {
-        background-color: #FF8300;
-    }
-
-    a:visited {
-        text-decoration: none;
-        color: black;
-    }
-
 .col-md-4 {
     background-color: #B7AC44;
     padding: 20px;
@@ -51,18 +37,37 @@ a {
     padding: 5px;
 }
 
-    .form-group > label {
-        background-color: #B7AC44;
-    }
+.form-group > label {
+    background-color: #B7AC44;
+}
 
-    .form-group > input {
-        background-color: #FF4500;
-    }
+.form-group > input {
+    background-color: #FF4500;
+}
 
-    .form-group > textarea {
-        background-color: white;
-    }
+.form-group > textarea {
+    background-color: white;
+}
 
-    .form-group > select {
-        background-color: #FF4500;
-    }
+.form-group > select {
+    background-color: #FF4500;
+}
+
+.form-group > a {
+    text-decoration: none;
+    color: black;
+    background-color: #FF4500;
+    padding: 10px 24px;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: 2px solid black;
+}
+
+a:hover {
+    background-color: #FF8300;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
