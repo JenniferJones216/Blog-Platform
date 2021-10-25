@@ -1,0 +1,51 @@
+﻿
+* {
+    background-color: #DF362D;
+}
+
+
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#BlogContent {
+    margin-top: 20px;
+    background-color: #B7AC44;
+    padding: 20px;
+}
+
+.EditDeleteLinks {
+    margin-left: 50px;
+    padding: 10px; 
+    color: black;
+}
+
+.EditDeleteLinks a {
+    text-decoration: none;
+   
+}
+
+.EditDeleteLinks a:hover {
+    background-color: #FF8300;
+}
+
+.EditDeleteLinks a:visited {
+    text-decoration: none; 
+    color: black;
+}
+
+.div3 {
+    grid-area: 1 / 3 / 2 / 4;
+}

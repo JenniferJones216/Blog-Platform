@@ -1,23 +1,42 @@
 ﻿@model IEnumerable<BlogPlatform.Models.Content>
 
 @{}
-<div class="text-center">
-    <h1>List of Blog Posts</h1>
 
-    <h2><a href="/Content/AddContent">Create New Blog Entry</a></h2>
-    <div class="text-success">@ViewBag.Result</div>
-    <div class="text-danger">@ViewBag.Error</div>
-    <hr />
-    <ul>
-        @foreach (var content in Model)
-        {
-            <li>
-                <a href="/Content/Details/@content.Id">@content.Title</a> - @content.Author - @content.Now
-                <a href="/Content/DeleteContent/@content.Id">Delete</a>
-            </li>
-        }
-    </ul>
-</div>
+@{
+    ViewData["Title"] = "Latin Dance Blog";
+}
+
+<head>
+    <link rel="stylesheet" href="~/Content/Index.css" />
+</head>
+
+<section class="parent">
+    <div class="div1"></div>
+
+    <div class="div2">
+        <h1>Latin Dance Blog - Index</h1>
+
+        <h3><a href="/Content/AddContent">Create New Blog Entry</a></h3>
+        <dl id="List">
+
+
+            @foreach (var content in Model)
+            {
+                <dd>
+                    <a href="/Content/Details/@content.Id">@content.Title - </a>
+                    <a href="/Content/DeleteContent/@content.Id">Delete</a>
+                    <hr />
+                </dd>
+            }
+        </dl>
+
+        <h3><a href="/Home/Index">Back to Home Page</a></h3>
+
+
+    </div>
+    <div class="div3"></div>
+
+</section>
 
 
 

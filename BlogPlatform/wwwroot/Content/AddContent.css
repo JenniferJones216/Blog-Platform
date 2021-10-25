@@ -1,0 +1,68 @@
+﻿* {
+    background-color: #DF362D;
+}
+
+hr {
+    border-color: #FF4500;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.div3 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+    a:hover {
+        background-color: #FF8300;
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: black;
+    }
+
+.col-md-4 {
+    background-color: #B7AC44;
+    padding: 20px;
+    margin-bottom: 4em;
+}
+
+.form-group {
+    background-color: #B7AC44;
+    padding: 5px;
+}
+
+    .form-group > label {
+        background-color: #B7AC44;
+    }
+
+    .form-group > input {
+        background-color: #FF4500;
+    }
+
+    .form-group > textarea {
+        background-color: white;
+    }
+
+    .form-group > select {
+        background-color: #FF4500;
+    }
