@@ -11,7 +11,7 @@ namespace BlogPlatform.Controllers
     public class ContentController : Controller
     {
         private IRepository<Content> _contentRepo;
-        public DateTime Now;
+        //public DateTime Now;
         
 
 
@@ -19,11 +19,11 @@ namespace BlogPlatform.Controllers
         public ContentController(IRepository<Content> contentRepo)
         {
             this._contentRepo = contentRepo;
-            this.Now = DateTime.Now;
+            //this.Now = DateTime.Now;
         }
         public IActionResult Index(string? message) 
         {
-            DateTime dateOnly = Now.Date;
+            //DateTime dateOnly = Now.Date;
             if (!String.IsNullOrEmpty(message))
             {
                 ViewBag.Result = message;
@@ -35,7 +35,7 @@ namespace BlogPlatform.Controllers
         public IActionResult AddContent()
         {
             DateTime Now = DateTime.Now;
-            DateTime dateOnly = Now.Date;
+            //DateTime dateOnly = Now.Date;
             ViewBag.Categories = _contentRepo.GetAllCategories(); 
             return View(new Content());
         }
@@ -65,6 +65,7 @@ namespace BlogPlatform.Controllers
         public ViewResult Update(int id)
         {
             DateTime Now = DateTime.Now; 
+            //id.Now = DateTime.Now; 
             ViewBag.Categories = _contentRepo.GetAllCategories();
             var content = _contentRepo.GetByID(id);
             return View(content);
@@ -73,6 +74,7 @@ namespace BlogPlatform.Controllers
         [HttpPost]
         public ActionResult Update(Content content)
         {
+            content.Now = DateTime.Now;
             _contentRepo.Update(content);
             return RedirectToAction("Index");
         }
