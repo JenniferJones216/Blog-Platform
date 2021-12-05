@@ -1,31 +1,10 @@
 # Blog Platform
-## Objective
-- Students will employ good software design and testing principles in order to create a full-stack, server-side-rendered, web application.
-- Students will build the front-end portion using HTML and CSS. (No frameworks, No JavaScript... at all)
-- Students will build the back-end portion using ASP.Net Core, Entity Framework and a SQL database.
+- A full-stack, server-side-rendered, web application.
+- Front-end portion using HTML and CSS. 
+- Back-end portion using ASP.Net Core, Entity Framework and a SQL database.
 
 ## The Scenario
 We've been hired by NobodyCares Inc. to build a Proof of Concept (PoC) application for a company looking to make the next new hot blogging platform! This being a PoC app, we don't (yet) have to worry about all of the security and user management concerns that we would have in a fully functional application. All our client wants from us are the beginnings of the actual User eXperience (UX). Our client also wants an in depth and COMPLETE look at our applications User Interface (UI), so let's make it look good.
-
-## The Starter Project
-You have been given an ASP.Net Core Web Application starter project. It is your job to construct an MVC application that contains the appropriate Models, Views, and Controllers as outlined here. Additionally, you must set up a relational database as we've done in class. Testing files are provided, but tests are not written. 
-
-## Content Model
-We can't very well have a blog without some content. Each Content instance should include:
-- Title
-- Body
-- Author
-- PublishDate (Look into the DateTime class for this)
-- Category (Content should have only one)
-
-Seed your database with at least 2-3 examples of Content for each Category.
-
-## Category Model
-Each Category should have:
-- Name
-- Content (Each Category can have multiple Content instances)
-
-Seed your database with at least 3 examples of Categories.
 
 ## Controllers
 We need to direct traffic efficiently. All of our entities should be managed by their own Controller. For example, all interaction with Content should be isolated to one Controller. You may have to ACCESS other entities in your Controllers. But the main entities that Controller is meant to direct should be well organized.
@@ -41,34 +20,4 @@ In addition, give users the ability to update or delete an existing Content inst
 
 Make sure all collections are organized with proper containing elements (i.e. ol or ul for list items).
 
-## Tips for Getting Started
-- Prepare
-- KEEP IT SIMPLE! Our applications aren't complicated until WE make them that way.
-- KEEP IT SIMPLE! So important that it gets two rules.
-- Make the branches you'll need for your project (main and dev to start).
 
-## Plan of Action
-- Implement MVC principles for our Content model
-- Implement MVC principles for our Category model
-- Add navigation properties to establish that one Category has many Contents.
-- Add migrations and update database.
-- Add seed data for Categories and Contents.
-- Check your SQL database. Are your database, tables, and seed data there as expected?
-- Create Index and Details views for both Category and Content. Display all necessary properties and include navigation links.
-- Test that your views work in the browser as expected.
-- Implement the Create, Update, and Delete views for Content.
-- Add navigation links to the Create, Update, and Delete views.
-- Add a style sheet and style all your views.
-
-## Stretch Tasks
-Stretch tasks should only be attempted after all requirements have been met.
-- A landing (home) page that welcomes the user to our application.
-- Add a Tags model with a many to many relationship to Blog Content.
-- Allow users to create a new Tags from the Tags Index page, and/or new Categories from the Categories Index page.
-
-## Grading
-Use Object Oriented Programming principles to your advantage by reducing repetition and keeping the details of your classes hidden and private from other classes.
-
-Proper use of MVC and Repository patterns to organize your code. Appropriate Controllers, actions, and Views give users the ability to Read, Add, Update, and Delete Blog Content.
-
-Incorporation of Code First database design using Entity Framework. Seed data has been added to the tables and migrations are named and used appropriately.
